@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Main Box Starts -->
+    <div class="bg-slate-200 flex justify-center items-center h-screen">
+        <!-- Container Starts -->
+        <div class="bg-white w-[600px] px-6 py-5 space-y-6 m-10 rounded-lg shadow-2xl">
+            <div class="flex justify-center">
+                <h1 class="text-4xl font-medium md:text-5xl">URL Shortener</h1>
+            </div>
+            <div>
+                <form id="shorten-url" class="space-y-2">
+                    <div class="flex flex-col space-y-2">
+                        <label for="url">Enter URL:</label>
+                        <input type="url" name="url" id="url" class="bg-gray-100 py-3 px-4 rounded-lg outline-orange-300"
+                            placeholder="https://xyz.com/">
+                    </div>
+                    <div class="flex flex-col space-y-2">
+                        <label for="shortCode">Enter Short Code:</label>
+                        <input type="text" name="shortCode" id="shortCode" class="bg-gray-100 py-3 px-4 rounded-lg outline-orange-300"
+                            placeholder="xyz, shortname, small, tiny">
+                    </div>
+                    <div class="flex justify-center mt-6">
+                        <button type="submit"
+                            class="bg-orange-500 w-full rounded-lg py-3.5 text-white text-xl hover:bg-orange-600">Shorten</button>
+                    </div>
+                </form>
+            </div>
+            <div class="flex flex-col space-y-2">
+                <h1 class="text-xl">List of Shortener URL:</h1>
+                <div>
+                    <ul class="bg-gray-100 rounded-lg py-3 px-4 space-y-4" id="shortened-urls">
+                        
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <!-- Container Ends -->
+    </div>
+    <!-- Main Box Ends -->
+    <script src="app.js"></script>
+</body>
+
+</html>
